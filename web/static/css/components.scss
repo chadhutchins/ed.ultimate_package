@@ -44,12 +44,16 @@
     .item_listing {
         list-style:none;
         margin-bottom:0;
-        @include clearfix();
+
+        &,
+        .item {
+            @include clearfix();
+        }
 
         .item {
+            margin-bottom:20px;
             margin-left:0;
             position:relative;
-            @include clearfix();
         }
 
         a {
@@ -59,7 +63,7 @@
             &:focus {
                 
             }
-        } // .item_listing a
+        }
 
         .item_meta {
             
@@ -75,7 +79,34 @@
     /* 2.2. BLOCK LISTING (Base: item_listing) -------------------- */
 
     .block_listing {
-        
+        color:#FFF;
+        margin-left:-20px;
+
+        .item {
+            background-color:#CCC;
+            float:left;
+            margin-left:20px;
+            width:190px;
+        }
+
+        a {
+            color:#000;
+            display:block;
+            text-decoration:none;
+
+            &:hover,
+            &:focus {
+                background-color:#BBB;
+            }
+        }
+
+        .item_meta {
+            
+        }
+        .item_content {
+            padding:0.625em 0.9375em 0.0625em; /* 10px 15px 1px */
+        }
+
     } // .block_listing
 
     /* @end */
@@ -84,6 +115,37 @@
 
     .article_listing {
         
+
+        .item {
+            border-bottom:1px solid #CCC;
+            padding:10px 0;
+        }
+
+        img {
+            padding-right:10px;
+        }
+        
+        a {
+            
+
+            &:hover,
+            &:focus {
+                
+            }
+        }
+
+        .item_meta,
+        .item_content {
+            float:left;
+        }
+        .item_meta {
+            padding-right:20px;
+            width:85px;
+        }
+        .item_content {
+            width:505px;
+        }
+
     } // .article_listing
 
     /* @end */
